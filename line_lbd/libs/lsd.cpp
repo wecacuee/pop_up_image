@@ -394,9 +394,9 @@ CV_EXPORTS Ptr<LineSegmentDetector> createLineSegmentDetector(
         int _refine, double _scale, double _sigma_scale, double _quant, double _ang_th,
         double _log_eps, double _density_th, int _n_bins)
 {
-    return makePtr<LineSegmentDetectorImpl>(
+    return Ptr<LineSegmentDetectorImpl>(new LineSegmentDetectorImpl(
             _refine, _scale, _sigma_scale, _quant, _ang_th,
-            _log_eps, _density_th, _n_bins);
+            _log_eps, _density_th, _n_bins));
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
