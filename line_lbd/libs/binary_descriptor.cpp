@@ -1535,12 +1535,12 @@ BinaryDescriptor::EDLineDetector::EDLineDetector( EDLineParam param )
 void BinaryDescriptor::EDLineDetector::InitEDLine_()
 {
   bValidate_ = true;
-  ATA = cv::Mat_<int>( 2, 2 );
-  ATV = cv::Mat_<int>( 1, 2 );
-  tempMatLineFit = cv::Mat_<int>( 2, 2 );
-  tempVecLineFit = cv::Mat_<int>( 1, 2 );
-  fitMatT = cv::Mat_<int>( 2, minLineLen_ );
-  fitVec = cv::Mat_<int>( 1, minLineLen_ );
+  ATA = cv::Mat_<float>( 2, 2 );
+  ATV = cv::Mat_<float>( 1, 2 );
+  tempMatLineFit = cv::Mat_<float>( 2, 2 );
+  tempVecLineFit = cv::Mat_<float>( 1, 2 );
+  fitMatT = cv::Mat_<float>( 2, minLineLen_ );
+  fitVec = cv::Mat_<float>( 1, minLineLen_ );
   for ( int i = 0; i < minLineLen_; i++ )
   {
     fitMatT[1][i] = 1;
